@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '8.x-dev',
-    'version' => '8.9999999.9999999.9999999-dev',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => 'b1b28a6bb120a3d1bb3786ca47f66a95bcb292aa',
+    'reference' => 'de4dbd9210308354cacf54c1f9f18d1f14c00cc7',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -431,12 +431,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '8.x-dev',
-      'version' => '8.9999999.9999999.9999999-dev',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'b1b28a6bb120a3d1bb3786ca47f66a95bcb292aa',
+      'reference' => 'de4dbd9210308354cacf54c1f9f18d1f14c00cc7',
     ),
     'laravel/sail' => 
     array (

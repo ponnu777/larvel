@@ -1,10 +1,10 @@
 FROM php:7.3-fpm
 
 # Copy composer.lock and composer.json
-COPY composer.lock composer.json /var/www/html/
+COPY composer.lock composer.json /var/www/
 
 # Set working directory
-WORKDIR /var/www/html
+WORKDIR /var/www/html/
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -40,12 +40,12 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY . /var/www/html
 
 # Copy existing application directory permissions
-COPY --chown=www-data:www-data . /var/www/html
-RUN chown www-data:www-data -R /var/www/html
-RUN chown www-data:www-data -R /var/www/html/storage
-RUN chown www-data. -R /var/www/html/bootstrap/cache
-# Change current user to www-data
-#USER www-data
+#COPY --chown=www:www . /var/www/html
+RUN useradd deploy
+RUN chown -R deploy. /var/www/html/storage
+RUN chown -R deploy. /var/www/html/bootstrap/cache
+# Change current user to www
+#USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
